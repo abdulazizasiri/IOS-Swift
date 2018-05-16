@@ -12,3 +12,23 @@ if (x > y) {
     print("Equals")
 }
 
+//NOTE: Strings can use these operators in swift. They mean something different which is it checks if the string comes before another string alphabetically
+
+
+//Comparison operators can also be used on strings. A string is “less than” another string if it comes first alphabetically:
+//> greater than
+//< less than
+//>= greater than or equal to
+//<= less than or equal to
+
+
+var string1 = "apple"
+var string2 = "orange"
+
+if (string1 > string2) {
+    print("apple comes second")
+} else if (string1 < string2) {
+    print("apple comes first")
+} else {
+    print("Equals")
+}

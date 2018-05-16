@@ -32,3 +32,6 @@ if (string1 > string2) {
 } else {
     print("Equals")
 }
+
+let anotherAlphabeticalBool = "xerox" > "xylophone" // this is false because xerox comes first. os it should be < xylophone
+print(anotherAlphabeticalBool);

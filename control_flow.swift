@@ -25,7 +25,7 @@ if (x > y) {
 var string1 = "apple"
 var string2 = "orange"
 
-if (string1 > string2) {
+if (string1 > string2 ) {
     print("apple comes second")
 } else if (string1 < string2) {
     print("apple comes first")
@@ -33,5 +33,13 @@ if (string1 > string2) {
     print("Equals")
 }
 
+
 let anotherAlphabeticalBool = "xerox" > "xylophone" // this is false because xerox comes first. os it should be < xylophone
 print(anotherAlphabeticalBool);
+
+
+// We can use logical operators to combine some logis such as && AND  , || OR. ! NOT
+
+
+
+

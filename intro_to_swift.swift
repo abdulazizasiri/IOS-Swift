@@ -1,12 +1,4 @@
 
-//
-//  main.swift
-//  apps
-//
-//  Created by Abdulaziz Asiri on 5/16/18.
-//  Copyright © 2018 Abdulaziz Asiri. All rights reserved.
-//
-
 import Foundation
 
 print("Hello, World!")

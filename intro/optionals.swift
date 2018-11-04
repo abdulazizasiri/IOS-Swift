@@ -6,3 +6,17 @@
 
 // Examples
 
+let possibleNumber = "123"
+let convertedNumber:Int? = Int(possibleNumber) // Int() retuens an optional Int. 
+
+// 1- One way to check if ther exist a value if by using: Force unwrapping.
+// Note: You must use ! to force it.
+if convertedNumber != nil {
+    print("Force unwrapping \(convertedNumber!)")
+}
+
+
+//2- Second way is to use. Optional Binding. We do not have to use ! to force. This if statement does the job perfectly. 
+if var value = convertedNumber {
+    print("Optional binding \(value)")
+}

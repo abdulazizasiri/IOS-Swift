@@ -20,3 +20,21 @@ if convertedNumber != nil {
 if var value = convertedNumber {
     print("Optional binding \(value)")
 }
+
+
+
+
+// 3- This is a dangerous way to do it. It is called Implicit unwrapping. This one used mostly with classes.
+// You should know that there exist a value in the optional. 
+// It uses !
+
+var va: Int! = 10
+let vv:Int = va
+print("Value is \(vv)")
+
+
+// Whereas if we use ? then you must add exclamation mark to the optional.
+
+let possibleString: String? = "An optional string."
+let forcedString: String = possibleString! // requires an exclamation mark
+print("Forced String \(forcedString)")

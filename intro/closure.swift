@@ -26,7 +26,6 @@ var filterList = filterWithclosure(closure: {(num) -> Bool in
 
 func changeWithClosure (closure: (Int) -> Bool, numbers:[Int]) -> [Int] {
     var nums = [Int]()
-  
     for num in numbers{
         if closure(num) {
             nums.append(num)
@@ -43,3 +42,13 @@ var newList = changeWithClosure(closure:closureFunction, numbers: [1,2,3,4,5])
 
 
 print(newList)
+
+
+// Another example: this way will cer
+
+var sumOfTwo: (Int, Int) -> (Int) = {x, y in return x+y}
+
+
+var hello: () -> String = { return "Hello world"}
+sumOfTwo(12,12)
+print(hello())

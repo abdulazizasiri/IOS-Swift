@@ -24,6 +24,7 @@ enum AmericanLeague: String {
     case Rangers = "Arlingon"
 }
 
+
 // Access an enum
 print(AmericanLeague.As.rawValue)
 
@@ -48,5 +49,17 @@ case .West:
 default:
     print("Nothing")
 }
+
+// Associated values:
+
+enum Values {
+    case Code(String)
+    case Password(String)
+    case Birth(Int, Int,Int)
+}
+
+
+var code = Values.Code("Swift")
+print(code)
 
 

@@ -1,47 +1,42 @@
-// protocols in general
+// Protocols
 
-protocol CryptoCurrency {
-    var name:String {get}
-    var price: Int {get set}
-    func showHistroy() -> Void
-    mutating func changeBit()
-    init(name:String)
-    
+
+// protocol syntax
+
+protocol SomeProtocol {
+    // protocol definition goes here
+    var name: String {get }
 }
 
-struct Bitcoin:CryptoCurrency {
-    var name: String
-    
-    var price: Int
-    func showHistroy() {
-        print("Bitcoin history")
-    }
-    
-   mutating func changeBit(){
-        print("We are changing bits")
-    }
-    
-      init(name:String){
-        self.name = name
+
+// adopting a protocl
+
+struct SomeStructure: SomeProtocol {
+    // structure definition goes here
+    var name:String // Conform to protocl SomeProtocol
+}
+
+class SomeSuperclass {
+    init(){
+        
     }
 }
-class Ethereum:CryptoCurrency {
-    
-    var name: String
-    
-    var price: Int
-    init(name: String, price: Int){
-      self.name = name
-      self.price = price
-    }
-    func showHistroy() {
-        print("Eth history")
-    }
-    
-    func changeBit(){
-        print("We are changing bits")
-    }
-   required init(name:String){
-        self.name = name
-    }
+// Class whihc has a super class and a protocol
+
+//class SomeClass: SomeSuperclass, SomeProtocol {
+//    // class definition goes here
+//    var name:String // Conform to protocl SomeProtocol
+//
+//}
+
+// Protocl whihc states that there are two props whihc inidates one to be gettable and settable and a gettable (read-only)
+protocol SomeProtocol2 {
+    var mustBeSettable: Int { get  }
+    func printName () -> Void
+    var doesNotNeedToBeSettable: Int { get }
 }
+
+
+var x = SomeStructure(name:"Aziz")
+x.name = "Faisal"
+

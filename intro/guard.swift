@@ -11,6 +11,7 @@ class Person {
 func name() {
 var person = Person(name: nil, age: 123)
 
+    // personName is accessible in the whole function body.
 guard let personName = person.name else {
     print("Name is not defined")
     return
@@ -18,7 +19,7 @@ guard let personName = person.name else {
     print("The name is \(personName)")
     
     // Better than
-    
+     // personName2 is accessible Only inside the if let. Outside usage require force unwrapping.
     if let personName2 = person.name {
         print(personName2)
     } else {

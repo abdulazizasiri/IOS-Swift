@@ -14,3 +14,6 @@
    
         
     }
+
+
+// See how we are using closures in alert views controller. Pretty interesting

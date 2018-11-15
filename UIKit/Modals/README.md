@@ -1,5 +1,5 @@
-// Examples of Modals in Ios I learnt so fat. 
+## Examples of Modals in Ios I learnt so far. 
 
-// Alerts
+- Alerts
 
-// Image Pickers
+- Image Pickers

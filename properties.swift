@@ -48,7 +48,7 @@ struct BodyStarts {
         set {
             heigh = newValue * 2 //Error
         }
-       
+    
     }
     
     var all:Int {
@@ -69,4 +69,5 @@ struct BodyStarts {
 var body = BodyStarts(heigh: 188, weight: 100)
 body.all = 12 // 12000
 body.bmi
+
 

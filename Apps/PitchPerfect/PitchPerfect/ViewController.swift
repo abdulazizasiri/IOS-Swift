@@ -14,7 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
+    // this is for pumpkin.
 
+    @IBAction func touchSecondCard(_ sender: UIButton) {
+        flipCard(withEmoji: "🎃", on: sender)
+    }
+    
+    // This is for ghost.
     @IBAction func touchCard(_ sender: UIButton) {
         print("Flip this emoji")
         // when clicked, pelease flip the card.
@@ -28,7 +36,7 @@ class ViewController: UIViewController {
             button.backgroundColor = #colorLiteral(red: 1, green: 0.6679217219, blue: 0, alpha: 1) // color. is a color literal
             
         } else {
-            button.setTitle("👻", for: UIControl.State.normal)
+            button.setTitle(emoji, for: UIControl.State.normal)
             button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
     }

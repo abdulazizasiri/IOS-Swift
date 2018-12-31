@@ -45,3 +45,22 @@ person2.age
 var p = Person()
 p.name
 p.age
+
+
+// 
+
+class Animal {
+    var name: String
+    var age: Int
+    init(name: String, age:Int) {
+        self.name = name
+        self.age = age
+    }
+    
+    convenience init(){
+        self.init(name:"Monkey", age:15)
+        print(self.name)
+        
+    }
+    
+}

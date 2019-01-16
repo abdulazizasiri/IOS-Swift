@@ -123,4 +123,16 @@ print(o)
 
 
 
+// Function type as a returned type 
+
+func printIt() ->  Void {
+    print ("The number is \(y)")
+}
+
+
+func sub() -> () -> Void {
+    return printIt
+}
+var returnedType = sub()
+ returnedType()
 

@@ -54,3 +54,73 @@ func mathmetics (_ mathfunction:(Int, Int)-> Int, _ a:Int, _ b:Int , _ c:Int) ->
 
 
 
+// Function Type: 1- Assigning a function to different function which has the same function type. 
+// 2- function type as a parameter to another function. 
+
+
+
+// Function types
+// All functions have their type.
+// Function types are defined by the return type and the parameter type.
+
+
+
+
+// ()-> ()
+func sayHi(){
+    print("Hi ")
+}
+
+
+// () -> ()
+
+// both funciton are different, but they have the same type.
+func multiplay(){
+    print(2*5)
+}
+
+
+func addTwoInts (x:Int, y:Int) -> Int {
+    return x + y
+}
+
+var mathFunction: (Int, Int) -> Int = addTwoInts
+
+
+var y  = mathFunction(12,12)
+
+print(y)
+
+// Note: You can assign this mathfnction to some other different funciotn whcih has the same function type.
+
+func mult (x:Int, y:Int) -> Int {
+    return x * y
+}
+mathFunction = mult ;
+var m = mathFunction(12,12)
+print(m)
+
+// Function type as parameters for another function.
+
+
+
+func add (x:Int, y:Int, m:(Int,Int) -> Int) -> Int {
+    return m(x,y) + (x+y)
+}
+
+var param = add(x: 5, y: 4, m: mult);
+
+// param = 5+4 + 20 = 29
+
+print(param)
+
+
+var functionMath: (Int, Int, (Int,Int)->Int )  ->Int ;
+functionMath = add
+var o = functionMath(12,12,mult)
+
+print(o)
+
+
+
+

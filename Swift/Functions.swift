@@ -136,3 +136,24 @@ func sub() -> () -> Void {
 var returnedType = sub()
  returnedType()
 
+
+
+// this is an amazing example which uses function type as a returned type.
+
+
+
+func stepForward(input: Int) -> Int {
+    return input + 1
+}
+
+func stepBackward(input: Int) -> Int {
+    return input - 1
+}
+
+func chooseStepFunction(backward: Bool) -> (Int) -> Int {
+    return backward ? stepBackward : stepForward
+}
+
+let f = chooseStepFunction(backward: true)
+print(f(12))
+

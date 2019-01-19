@@ -197,3 +197,38 @@ func chooseStepFunction(backward: Bool) -> (Int) -> Int {
 let f = chooseStepFunction(backward: true)
 print(f(12))
 
+
+
+
+
+// Closures: This is a concept introduced by new Pls.
+// I covered it in JS, but it is not clear.
+
+// Clsoure is a block of code
+
+
+//Closures can capture and store references to any constants and variables from the context in which they are defined.
+
+/*
+ 
+ 
+ Nested functions are hidden from the outside world by default, but can still be called and used by their enclosing function. An enclosing function can also return one of its nested functions to allow the nested function to be used in another scope.
+ 
+ */
+
+
+
+
+// this code was written above using Function types.
+// Now this is how we do it using function type.
+func chooseStepFunction(backward: Bool) -> (Int) -> Int {
+    func stepForward(input: Int) -> Int { return input + 1 }
+    func stepBackward(input: Int) -> Int { return input - 1 }
+    return backward ? stepBackward : stepForward
+}
+
+
+let moveNearerToZero = chooseStepFunction(backward: false)
+
+print(type(of: moveNearerToZero))
+

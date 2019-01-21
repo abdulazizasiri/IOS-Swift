@@ -219,7 +219,7 @@ print(f(12))
 
 
 
-// this code was written above using Function types.
+// this code was written above using nested Functions.
 // Now this is how we do it using function type.
 func chooseStepFunction(backward: Bool) -> (Int) -> Int {
     func stepForward(input: Int) -> Int { return input + 1 }

@@ -233,5 +233,79 @@ let trailing2 = names.sorted() {
 
 
 
-// Trainling function. 
+
+
+// It is the same idea found in js.
+func makeIncrementer(forIncrement amount: Int) -> () -> Int {
+    
+    
+    var runningTotal = 0
+    
+    print("running total from ouuter \(runningTotal)")
+    func incrementer() -> Int {
+        print("running total from inner \(runningTotal)")
+
+        
+        runningTotal += amount
+        
+        
+        
+        return runningTotal
+        
+        
+    }
+    
+    
+    return incrementer
+    
+    
+}
+
+
+let val = makeIncrementer(forIncrement: 10)
+var num = val()
+print(num)
+num = val()
+print(num)
+num = val()
+print(num)
+
+
+
+func respponseTo(   comparsion:  () -> Bool) {
+    if comparsion() {
+        print("This is true")
+    } else {
+        print("This is false")
+    }
+}
+
+
+//Tnis is form 1
+func check() -> Bool {
+    return 1 == 1
+}
+//respponseTo(comparsion: check)
+
+// This is form 2
+
+//// This is form 3: Inferring of parameters and return type
+//respponseTo(comparsion: {in return 1==3}) // Does not work
+//respponseTo(comparsion: {_ _ in return 1==3}) // Does not work
+
+//respponseTo(comparsion: {in  1==3}) // Does not work
+
+// You cannot use form 3 and 4 when you have no parameters. implicit return {params in return blah }
+// And no return: {,,, in blah}
+
+// Using @autoclosure
+//respponseTo(comparsion: 1==10)
+
+
+// Using trainling closure.
+
+respponseTo(){
+    1==2
+}
+ 
 

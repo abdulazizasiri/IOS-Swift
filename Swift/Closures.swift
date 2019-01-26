@@ -233,4 +233,5 @@ let trailing2 = names.sorted() {
 
 
 
-// map using trainling
+// Trainling function. 
+

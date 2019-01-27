@@ -1,7 +1,6 @@
-
 // apple example:
 
-// Creating a structure using the strcuct keyword. 
+
 struct Resolution {
     var width:Int
     var height: Int
@@ -22,10 +21,31 @@ class VideoMode {
 
 
 // Creating an instance
-let someResolution = Resolution(width: 1, height: 1)
-let someVideoMode = VideoMode()
+var someResolution = Resolution(width: 1, height: 1)
+var someVideoMode = VideoMode()
 
 
 // To access the properties of a class or a strcuture, we use the dot operator.
+
+// Strucutre are value type: Things are copied:
+
+var resolutionCopy = someResolution
+
+resolutionCopy.height = 1000
+
+// Each one has it own copy. No one has modiefed the others props.
+print("some resolution\(someResolution)")
+print("resolution copy \(resolutionCopy)")
+
+
+// Classes are reference type. Which means when assigned  areference will be changed to the other variable.
+
+var videModeReference = someVideoMode
+videModeReference.frameRate = 1000
+
+// REference types variable can mutate the props so be extra careful .
+
+print("video mode original \(someVideoMode.frameRate)") // 1000
+print("video mode Reference \(videModeReference.frameRate)") // 1000 
 
 

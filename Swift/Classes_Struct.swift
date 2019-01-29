@@ -4,6 +4,12 @@
 struct Resolution {
     var width:Int
     var height: Int
+    mutating func eat() {
+        width = 10
+    }
+    func change(){
+        width = 10
+    }
 }
 class VideoMode {
 
@@ -17,6 +23,9 @@ class VideoMode {
         self.interlaced = false
         self.name = ""
     }
+//     mutating func z() { mutating does not work on classes. only works on structures to change the props value via a function.
+     
+//     }
 }
 
 

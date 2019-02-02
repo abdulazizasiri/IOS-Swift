@@ -107,3 +107,41 @@ let animal = Animal()
 
 
 animal.age = 12 // This is fine. Because classes are reference type.
+
+
+
+ /// COMPUTER PROPERTY
+
+struct Point {
+    var x = 0.0, y = 0.0
+}
+struct Size {
+    var width = 0.0, height = 0.0
+}
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    var center: Point {
+        get {
+            let centerX = origin.x + (size.width / 2)
+            let centerY = origin.y + (size.height / 2)
+            return Paoint(x: centerX, y: centerY)
+        }
+        set(newCenter) {
+            origin.x = newCenter.x - (size.width / 2)
+            origin.y = newCenter.y - (size.height / 2)
+        }
+    }
+}
+
+
+var point = Point()
+var pnt = Point()
+point.x = 11
+point.y = 11
+var rect  = Rect()
+rect.center = point
+pnt = rect.center
+print(pnt)
+
+

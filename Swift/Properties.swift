@@ -92,3 +92,18 @@ emp.age = 22 // This is an error. since emp is constant with "let"
 // Another example: 
 var emp2 = Employee(name: "Mike", age: 25) // Stored props during initialization
 emp2.name = "Jack" // This is worng as well since name is constant. 
+
+
+//  The above happens becuase structures are value-types, when we have a reference type things become different :) 
+
+
+class Animal {
+    var name:Int?
+    var age:Int?
+}
+
+let animal = Animal()
+
+
+
+animal.age = 12 // This is fine. Because classes are reference type.

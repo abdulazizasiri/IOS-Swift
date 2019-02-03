@@ -1,23 +1,6 @@
-// UIKIT: A set of classes that are respoinsble to make ios app user interface
-// IT is responsible for building the view. √
+// Initilization
 
-
-// initilizers in swift is a big topic:
-
-
-/*
- 
- Class inheritance and Initialization
- Failable initialization
- Required initialization
- 
- */
-
-
-//  Note: The biggest role in initilizrs is the idea that setting initial values for instance variables (of course if they are not set to a default value)
-
-
-// Mutiple initilizers in the same class. They differ in the number of parameters
+// Designated initializers
 
 class Person {
     var name: String?
@@ -47,8 +30,7 @@ p.name
 p.age
 
 
-// 
-
+//
 class Animal {
     var name: String
     var age: Int
@@ -56,7 +38,7 @@ class Animal {
         self.name = name
         self.age = age
     }
-    
+    // convenience can only call desingated within the same class.
     convenience init(){
         self.init(name:"Monkey", age:15)
         print(self.name)
@@ -64,3 +46,45 @@ class Animal {
     }
     
 }
+
+
+
+class Vehicle {
+    var numberOfWheels = 0
+    var description: String {
+        return "\(numberOfWheels) wheel(s)"
+    }
+    init(){
+        print("Suoer")
+    }
+    init(num: Int){
+        
+    }
+}
+
+
+// This is valid. Since designated is calling a designated cinstructor.
+//
+//print("Vehicle: \(vehicle.description)")
+//// Vehicle: 0 wheel(s)
+
+
+class Bicycle: Vehicle {
+    override init() {
+        super.init()
+        print("Sub")
+        numberOfWheels = 2
+    }
+}
+let vehicle = Vehicle()
+
+let b = Bicycle()
+
+// This is valid. Since designated is calling a designated cinstructor.
+
+print("Vehicle: \(vehicle.description)")
+// Vehicle: 0 wheel(s)
+
+
+
+

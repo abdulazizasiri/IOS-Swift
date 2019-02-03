@@ -23,3 +23,21 @@ bicycle.hasBasket = true
 
 // You can now access superclass props
 bicycle.currentSpeed = 15.0
+
+
+// Overriding methods
+
+class Train: Vehicle {
+    override func makeNoise() {
+        print("Choo Choo")
+    }
+}
+
+
+// Overriding props. getters and setters. 
+class Car: Vehicle {
+    var gear = 1
+    override var description: String {
+        return super.description + " in gear \(gear)"
+    }
+}

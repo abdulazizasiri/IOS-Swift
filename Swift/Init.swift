@@ -86,5 +86,28 @@ print("Vehicle: \(vehicle.description)")
 // Vehicle: 0 wheel(s)
 
 
+// Failable init. You can return nil
+struct Robot {
+    let species: String
+    init?(species: String) {
+        if species.isEmpty { return nil }
+        self.species = species
+    }
+}
+
+
+// Required init.
+
+class SomeClass {
+    required init() {
+        // initializer implementation goes here
+    }
+}
+
+class SomeSubclass: SomeClass {
+    required init() {
+        // subclass implementation of the required initializer goes here
+    }
+}
 
 

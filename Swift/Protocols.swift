@@ -1,4 +1,3 @@
-// Not yet
 // Protocol syntax:
 
 // you say, this class. strcuture is adopting or a certain protocol or confrom to a protocol. This means this clss/structure assigned a contract to implement all the methods, inside a protocols.√√√
@@ -21,7 +20,7 @@ protocol Souschef {
 // this is done by using a colon opeator :
 
 // After adopting, you need the class to conform to this
-class Rommate : Souschef{
+class Rommate : Souschef, Equatable{
     var hungry = true
     var name: String
     // When conforming to a certain protocol, then you need to implement all of its methods.
@@ -35,4 +34,11 @@ class Rommate : Souschef{
     func rinse(vegetable: String) -> String {
         return vegetable
     }
+
+    
+}
+// Why do we implmnet it outside of its class.
+// Why implment this outisde of the class is because operator is global functions.
+func ==(lhs:Rommate, rhs:Rommate)-> Bool {
+    return lhs.name == rhs.name && lhs.hungry == rhs.hungry ;
 }

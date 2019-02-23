@@ -11,7 +11,7 @@
 // Protocol syntax:
 
 
-// Degining a protocol
+// Degining a protocol. This is the
 protocol Souschef {
     func chop(vegetable: String) -> String
     func rinse(vegetable: String)  -> String
@@ -21,7 +21,7 @@ protocol Souschef {
 // Adopting a protocol: Adopting a protocol is done by using classes, enums or structures.
 // this is done by using a colon opeator :
 
-// After adopting, you need the class to conform to this
+// After adopting, you need the class to conform to this protocol. conforming is the idea of implmenting everything you signed up for in this case it is the (methods)
 class Rommate : Souschef, Equatable{
     var hungry = true
     var name: String

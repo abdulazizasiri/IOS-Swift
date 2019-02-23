@@ -6,6 +6,8 @@
 
 // There are three things: 1- defining , 2-adopting, 3- implementing
 
+// Adopting a protocol is like signing a contract  to implement every method on the list.
+
 // Protocol syntax:
 
 

@@ -1,6 +1,6 @@
 // Protocol syntax:
 
-// you say, this class. strcuture is adopting or a certain protocol or confrom to a protocol. This means this clss/structure assigned a contract to implement all the methods, inside a protocols.√√√
+// you say, this class or strcuture is adopting or a certain protocol confroms to a protocol. This means that this clss/structure assigned a contract to implement all the methods inside a protocols.√√√
 
 // protocol is an essential component for the delegate pattern.
 

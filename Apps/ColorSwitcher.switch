@@ -1,0 +1,54 @@
+//
+//  ViewController.swift
+//  ColorMaker
+//
+//  Created by Abdulaziz Asiri on 1/10/19.
+//  Copyright © 2019 Abdulaziz Asiri. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    @IBOutlet weak var redSwitch: UISwitch!
+    @IBOutlet weak var greenSwitch: UISwitch!
+    @IBOutlet weak var blueSwitch: UISwitch!
+    @IBOutlet weak var viewArea: UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @IBAction func blueSwitcher(_ sender: Any) {
+        if (blueSwitch.isOn){
+            blueSwitch.onTintColor = UIColor.blue ;
+            viewArea.backgroundColor = UIColor.blue
+        } else {
+            blueSwitch.backgroundColor = UIColor.black
+            viewArea.backgroundColor = UIColor.white
+        }
+    }
+    
+    @IBAction func greenSwitcher(_ sender: Any) {
+        if (greenSwitch.isOn){
+            greenSwitch.onTintColor = UIColor.green ;
+            viewArea.backgroundColor = UIColor.green
+        } else {
+            greenSwitch.backgroundColor = UIColor.black
+            viewArea.backgroundColor = UIColor.white
+        }
+    }
+    
+    @IBAction func redSwitcher(_ sender: Any) {
+        if (redSwitch.isOn){
+            redSwitch.onTintColor = UIColor.red ;
+            viewArea.backgroundColor = UIColor.red
+        } else {
+            redSwitch.backgroundColor = UIColor.black
+             viewArea.backgroundColor = UIColor.white
+        }
+    }
+    
+
+}
+
